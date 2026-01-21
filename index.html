@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Omar Kebrit - Premium SaaS Solutions & Digital Architecture.">
+    <title>Omar Kebrit | Digital Architect</title>
+
+    <!-- Fonts: Outfit (English) & Cairo (Arabic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="ph-fill ph-fire-simple" style="color: var(--accent);"></i>
+                <span data-i18n="logo_text">Omar Kebrit</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#products" data-i18n="nav_products">Products</a></li>
+                <li><a href="#features" data-i18n="nav_features">Services</a></li>
+                <li><a href="#pricing" data-i18n="nav_pricing">Pricing</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <!-- Language Toggle -->
+                <button id="lang-toggle" class="btn btn-sm btn-ghost">
+                    <i class="ph-bold ph-globe"></i> <span class="lang-text">العربية</span>
+                </button>
+
+                <a href="#demo-modal" class="btn btn-secondary mobile-hidden" data-i18n="nav_login">Access Demo</a>
+                <button class="menu-btn" aria-label="Toggle Menu">
+                    <i class="ph-bold ph-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <a href="#products" class="mobile-link" data-i18n="nav_products">Products</a>
+        <a href="#features" class="mobile-link" data-i18n="nav_features">Services</a>
+        <a href="#pricing" class="mobile-link" data-i18n="nav_pricing">Pricing</a>
+        <a href="#demo-modal" class="btn btn-primary" style="width: 100%; text-align: center;"
+            data-i18n="nav_login">Access Demo</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <header class="hero section-padding">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="badge" data-i18n="hero_badge">New: AI Workflow Engine</span>
+                <h1 class="hero-title">
+                    <span class="block-reveal" data-i18n="hero_title_1">Crafting Digital</span> <br>
+                    <span class="text-gradient block-reveal" data-i18n="hero_title_2">Masterpieces.</span>
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">
+                    High-performance SaaS architecture designed for scalability and elegance. Built by Omar Kebrit.
+                </p>
+                <div class="hero-btns">
+                    <a href="#products" class="btn btn-primary">
+                        <span data-i18n="btn_explore">Explore Projects</span>
+                        <i class="ph-bold ph-arrow-right icon-rtl"></i>
+                    </a>
+                    <a href="#demo-modal" class="btn btn-secondary">
+                        <i class="ph-fill ph-play-circle"></i>
+                        <span data-i18n="btn_demo">Live Demo</span>
+                    </a>
+                </div>
+                <!-- Signature Fingerprint -->
+                <div class="signature-mark">
+                    <span data-i18n="signature">Des. by Omar Kebrit</span>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <!-- GSAP Animated Interactive Card -->
+                <div class="glass-card main-dashboard gsap-tilt">
+                    <div class="dashboard-header">
+                        <div class="dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="search-bar"></div>
+                    </div>
+                    <div class="dashboard-body">
+                        <div class="sidebar"></div>
+                        <div class="content">
+                            <div class="chart-area pulse-anim"></div>
+                            <div class="row-items">
+                                <div class="item load-anim"></div>
+                                <div class="item load-anim" style="animation-delay: 0.2s"></div>
+                                <div class="item load-anim" style="animation-delay: 0.4s"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Stats -->
+                    <div class="float-card card-1 float-anim">
+                        <i class="ph-duotone ph-code"></i>
+                        <div>
+                            <span data-i18n="stat_code">Clean Code</span>
+                            <strong>100%</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Glows -->
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+    </header>
+
+    <!-- PRODUCTS SECTION -->
+    <section id="products" class="section-padding">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 class="section-title">
+                    <span data-i18n="products_title">Curated Products</span>
+                </h2>
+                <p class="section-subtitle" data-i18n="products_subtitle">
+                    A collection of high-impact SaaS tools ready for deployment.
+                </p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card animate-fade-up">
+                    <div class="product-image">
+                        <!-- Placeholder: Finance Dashboard -->
+                        <div class="placeholder-img color-1"></div>
+                        <div class="overlay">
+                            <a href="#" class="btn btn-secondary btn-sm" data-i18n="btn_view_details">View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-tags">
+                            <span class="tag">FinTech</span>
+                            <span class="tag">Dashboard</span>
+                        </div>
+                        <h3>FinFlow AI</h3>
+                        <p data-i18n="prod_desc_1">Automated financial forecasting with machine learning precision.</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card animate-fade-up" style="animation-delay: 0.1s;">
+                    <div class="product-image">
+                        <!-- Placeholder: CRM -->
+                        <div class="placeholder-img color-2"></div>
+                        <div class="overlay">
+                            <a href="#" class="btn btn-secondary btn-sm" data-i18n="btn_view_details">View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-tags">
+                            <span class="tag">CRM</span>
+                            <span class="tag">Sales</span>
+                        </div>
+                        <h3>ClientPulse</h3>
+                        <p data-i18n="prod_desc_2">Manage customer relationships with zero friction.</p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card animate-fade-up" style="animation-delay: 0.2s;">
+                    <div class="product-image">
+                        <!-- Placeholder: Analytics -->
+                        <div class="placeholder-img color-3"></div>
+                        <div class="overlay">
+                            <a href="#" class="btn btn-secondary btn-sm" data-i18n="btn_view_details">View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-tags">
+                            <span class="tag">Analytics</span>
+                            <span class="tag">Big Data</span>
+                        </div>
+                        <h3>DataSights</h3>
+                        <p data-i18n="prod_desc_3">Real-time data visualization for complex datasets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEMO MODAL -->
+    <div id="demo-modal" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <button class="modal-close"><i class="ph-bold ph-x"></i></button>
+
+            <div class="modal-header">
+                <i class="ph-fill ph-rocket-launch"
+                    style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                <h2 data-i18n="modal_title">Start Your Engine</h2>
+                <p data-i18n="modal_subtitle" style="color: var(--text-muted);">Get instant access to the Omar Kebrit
+                    demo environment.</p>
+            </div>
+
+            <form class="demo-form"
+                onsubmit="event.preventDefault(); this.querySelector('button').innerHTML = '<i class=\'ph-bold ph-check\'></i> Sent!';">
+                <div class="input-group">
+                    <i class="ph-bold ph-user"></i>
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="input-group">
+                    <i class="ph-bold ph-envelope"></i>
+                    <input type="email" placeholder="Work Email" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                    <span data-i18n="modal_btn">Access Now</span>
+                </button>
+            </form>
+
+            <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 1rem;">
+                Powered by Omar Kebrit Security
+            </p>
+        </div>
+    </div>
+
+    <!-- Placeholder for Products, Testimonials, Pricing, FAQ, Footer -->
+    <!-- Keeping simple to ensure file size isn't too massive, existing styles cover them -->
+    <section id="pricing" class="section-padding">
+        <div class="container">
+            <div class="text-center" style="text-align: center;">
+                <h2 class="section-title" data-i18n="nav_pricing">Pricing</h2>
+            </div>
+            <div class="pricing-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="glass-card animate-fade-up">
+                    <h3>Basic Link</h3>
+                    <div style="font-size: 2rem; font-weight: 700;">$999</div>
+                    <ul style="margin: 1rem 0;">
+                        <li>One Page</li>
+                        <li>Responsive</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary">Select</a>
+                </div>
+                <div class="glass-card animate-fade-up" style="border-color: var(--primary);">
+                    <h3>Pro App</h3>
+                    <div style="font-size: 2rem; font-weight: 700;">$2499</div>
+                    <ul style="margin: 1rem 0;">
+                        <li>Full System</li>
+                        <li>Bilingual</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Select</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p data-i18n="footer_rights">&copy; 2026 Omar Kebrit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
